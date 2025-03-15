@@ -3,6 +3,7 @@
 using acunmedya.Odev1.Classes;
 using acunmedya.Odev2.Classes;
 using acunmedya.Odev4.Classes;
+using acunmedya.Odev5.Classes;
 
 Insan insanObj = new Insan();
 Console.WriteLine("Yaşınızı giriniz : ");
@@ -11,16 +12,16 @@ string gelenSonuc = insanObj.yasKategoriBelirle(insanObj.yas);
 Console.WriteLine(gelenSonuc);
 
 
-Araba arabaObj = new Araba();
+ArabaDurumu arabaDurumuObj = new ArabaDurumu();
 Console.WriteLine("Araba yaşını giriniz : ");
-arabaObj.yas = int.Parse(Console.ReadLine());
+arabaDurumuObj.yas = int.Parse(Console.ReadLine());
 
 // if-else kullanımı
-string gelenSonuc2 = arabaObj.arabaDurumuBelirle(arabaObj.yas);
+string gelenSonuc2 = arabaDurumuObj.arabaDurumuBelirle(arabaDurumuObj.yas);
 Console.WriteLine(gelenSonuc2);
 
 // switch case kullanımı
-string gelenSonuc3 = arabaObj.arabaDurumuBelirle2(arabaObj.yas);
+string gelenSonuc3 = arabaDurumuObj.arabaDurumuBelirle2(arabaDurumuObj.yas);
 Console.WriteLine(gelenSonuc3);
 
 
@@ -76,6 +77,7 @@ s.meslek = "Stajyer";
 
 Calisan[] calisanList = {gm, mu, pr, s};
 
+// calışan bilgilerini döngü ile yazdırdım
 for (int j = 0; j < calisanList.Length; j++)
 {
     calisanList[j].calisanBilgileri(
@@ -87,9 +89,25 @@ for (int j = 0; j < calisanList.Length; j++)
     );
 }
 
-double toplamMaas = 0;
+// toplam maaş hesaplama
+double toplamMaas = 0.0;
 for (int i = 0; i < calisanList.Length; i++)
 {
     toplamMaas += calisanList[i].maasinizNedir();
 }
 Console.WriteLine("Toplam maaş: " + toplamMaas);
+
+
+
+// ödev-5
+Audi audiObj = new Audi();
+Ford fordObj = new Ford();
+Toyota toyotaObj = new Toyota();
+Araba[] arabaList = {audiObj, fordObj, toyotaObj};
+
+double toplamBenzin = 0.0;
+for (int k = 0; k < arabaList.Length; k++)
+{
+    toplamBenzin += arabaList[k].benzinTüketimi();
+}
+Console.WriteLine("Toplam benzin: " + toplamBenzin);

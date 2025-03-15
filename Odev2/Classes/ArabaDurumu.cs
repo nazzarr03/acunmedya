@@ -1,6 +1,6 @@
 namespace acunmedya.Odev2.Classes;
 
-public class Araba
+public class ArabaDurumu
 {
     public int yas;
     
