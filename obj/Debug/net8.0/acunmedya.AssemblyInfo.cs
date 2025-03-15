@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("acunmedya")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d1e6b868f431a9691552dda6e4688c49a8829b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e46207011dda89a7c2c0c6afb781c5a49081631")]
 [assembly: System.Reflection.AssemblyProductAttribute("acunmedya")]
 [assembly: System.Reflection.AssemblyTitleAttribute("acunmedya")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
