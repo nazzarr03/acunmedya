@@ -2,6 +2,7 @@
 
 using acunmedya.Odev1.Classes;
 using acunmedya.Odev2.Classes;
+using acunmedya.Odev4.Classes;
 
 Insan insanObj = new Insan();
 Console.WriteLine("Yaşınızı giriniz : ");
@@ -41,3 +42,54 @@ do
     Console.WriteLine("Sayi2 değeri : " + sayi2);
     sayi2--;
 } while (sayi2 > 0);
+
+
+
+// ödev-4
+GenelMudur gm = new GenelMudur();
+gm.ad = "Ali";
+gm.soyad = "Yıldız";
+gm.departman = "Yönetim";
+gm.meslek = "Genel Müdür";
+//gm.calisanBilgileri(gm.ad, gm.soyad, gm.meslek, gm.maasinizNedir(), gm.departman);
+
+Mudur mu = new Mudur();
+mu.ad = "Elif";
+mu.soyad = "Acar";
+mu.departman = "Yönetim";
+mu.meslek = "Müdür";
+//mu.calisanBilgileri(mu.ad, mu.soyad, mu.meslek, mu.maasinizNedir(), mu.departman);
+
+Programci pr = new Programci();
+pr.ad = "Nazar";
+pr.soyad = "Arık";
+pr.departman = "Bilişim";
+pr.meslek = "Programcı";
+//pr.calisanBilgileri(pr.ad, pr.soyad, pr.meslek, pr.maasinizNedir(), pr.departman);
+
+Stajyer s = new Stajyer();
+s.ad = "Ayşe";
+s.soyad = "kurt";
+s.departman = "Staj";
+s.meslek = "Stajyer";
+//s.calisanBilgileri(s.ad, s.soyad, s.meslek, s.maasinizNedir(), s.departman);
+
+Calisan[] calisanList = {gm, mu, pr, s};
+
+for (int j = 0; j < calisanList.Length; j++)
+{
+    calisanList[j].calisanBilgileri(
+        calisanList[j].ad,
+        calisanList[j].soyad,
+        calisanList[j].meslek,
+        calisanList[j].maasinizNedir(),
+        calisanList[j].departman
+    );
+}
+
+double toplamMaas = 0;
+for (int i = 0; i < calisanList.Length; i++)
+{
+    toplamMaas += calisanList[i].maasinizNedir();
+}
+Console.WriteLine("Toplam maaş: " + toplamMaas);
